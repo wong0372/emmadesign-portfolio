@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emma Labo</title>
+
+    <!-- 0. Font style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 0. css library BULMA -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+
+    <!-- 1. bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- 2. icon css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- 3. custom css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="whole-container">
+      <!-- add skip link -->
+      <ul role="list" class="skip-links list-unstyled fw-bold">
+        <li>
+          <a class="py-2 px-2 visually-hidden-focusable" href="#main-nav"
+            >Skip to main nav</a
+          >
+        </li>
+        <li>
+          <a class="px-2 py-2 visually-hidden-focusable" href="#main-content"
+            >Skip to main content</a
+          >
+        </li>
+      </ul>
+      <header class="sticky-top">
+        <!-- nav bar -->
+        <nav
+          role="navigation"
+          class="navbar navbar-expand-lg bg-white shadow-sm"
+          id="main-nav"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="index.html">
+              <img
+                role="img"
+                src="images/0_logo.svg"
+                width="230"
+                alt="Emma Labo logo image"
+                class="logo"
+              />
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-end text-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item px-5 py-3 fw-medium">
+                  <a class="nav-link px-4 py-2.5 rounded-2" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item px-5 py-3 fw-medium">
+                  <a class="nav-link px-4 py-2.5 rounded-2" href="work.html"
+                    >Work</a
+                  >
+                </li>
+                <li class="nav-item px-5 py-3 fw-medium">
+                  <a class="nav-link px-4 py-2.5 rounded-2" href="about.html"
+                    >About</a
+                  >
+                </li>
+
+                <li class="nav-item px-5 py-3">
+                  <a
+                    class="nav-link active px-4 py-2.5 rounded-2"
+                    aria-current="page"
+                    href="contact.html"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main role="main" class="min-vh-100" id="main-content">
+        <div class="position-relative">
+          <h1
+            role="heading"
+            aria-level="1"
+            class="col-12 text-center text-md-start px-md-5 py-5"
+          >
+            Let's Talk
+          </h1>
+          <!-- image -->
+          <div
+            class="col-8 col-md-3 ms-md-0 me-md-auto d-none d-md-block position-absolute bottom-0 start-0 mb-5 mb-md-5"
+          >
+            <img
+              src="images/0_yellow-rectangle.svg"
+              alt="Yellow restangle for background decoration"
+              class="img-fluid image"
+            />
+          </div>
+
+          <div
+            class="col-10 col-md-3 ms-auto me-md-0 d-none d-md-block position-absolute bottom-0 end-0"
+          >
+            <picture>
+              <source
+                srcset="images2/0_contact-small.png"
+                media="(max-width:767px)"
+              />
+
+              <source
+                srcset="images2/0_contact-large.png"
+                media="(min-width:768px)"
+              />
+
+              <img
+                role="img"
+                src="images/0_contact.png"
+                alt="Contact me photo"
+                class="img-fluid image"
+              />
+            </picture>
+          </div>
+
+          <!-- contact form from css library -->
+
+          <div
+            class="content-form col-10 mx-auto col-md-8 col-lg-5 border rounded p-4 border-black mb-5"
+            itemscope
+            itemtype="https://schema.org/ContactPoint"
+          >
+            <div class="field py-2">
+              <label for="fullname" class="label has-text-black">Name</label>
+              <div class="control">
+                <input
+                  aria-label="Add Full Name"
+                  class="input border-black has-background-white"
+                  id="fullname"
+                  type="text"
+                  placeholder="Your name"
+                  itemprop="name"
+                />
+              </div>
+            </div>
+
+            <div class="field py-2">
+              <label for="youremail" class="label has-text-black">Email</label>
+              <div class="control">
+                <input
+                  aria-label="Add your email"
+                  class="input border-black has-background-white"
+                  id="youremail"
+                  type="text"
+                  placeholder="Your Email"
+                  itemprop="email"
+                />
+              </div>
+            </div>
+
+            <div class="field py-2">
+              <label for="subject" class="label has-text-black">Subject</label>
+              <div class="control">
+                <input
+                  aria-label="Add the subject"
+                  class="input border-black has-background-white"
+                  id="subject"
+                  type="text"
+                  placeholder="Text input"
+                  itemprop="subjectOf"
+                />
+              </div>
+            </div>
+
+            <div class="field py-2">
+              <label for="yourmessage" class="label has-text-black"
+                >Message</label
+              >
+              <div class="control">
+                <textarea
+                  aria-label="Add your message"
+                  class="textarea border-black has-background-white"
+                  id="yourmessage"
+                  placeholder="Your Message"
+                  itemprop="toRecipient"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button
+                  role="button"
+                  class="btn btn-outline-primary my-3 px-4 py-2 rounded-20 fw-medium"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- footer section -->
+
+      <footer
+        role="contentinfo"
+        class="bg-dark d-flex justify-content-center align-items-center"
+      >
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12 col-md-6 order-md-2 text-md-end">
+              <a href="contact.html" aria-label="visit contact page">
+                <i class="bi bi-envelope px-3 py-3 fs-3"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                aria-label="visit instagram page"
+                ><i class="bi bi-instagram px-3 py-3 fs-3"></i
+              ></a>
+              <a
+                href="https://www.whatsapp.com/"
+                aria-label="visit whatspp page"
+                ><i class="bi bi-whatsapp px-3 py-3 fs-3"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com"
+                aria-label="visit linkedin page"
+                ><i class="fa-brands fa-linkedin-in px-3 py-3 fs-3"></i
+              ></a>
+            </div>
+
+            <div class="col-12 col-md-6 text-md-start">
+              <p class="px-3 py-3 fw-medium">
+                &copy; 2024 Emma Labo All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
