@@ -7,7 +7,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Cinzel', serif;
     font-size: 40px;
     font-weight: 600;
-}
+} 
+
+
 
 h4, h5, h6 {
     font-family: 'Cinzel', serif;
@@ -173,6 +175,38 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
 }
+
+/* Style for aligning titles (Email, Phone, Location) */
+.contact-section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section p strong {
+    margin-right: 10px;
+  }
+  
+  /* Style for social media icons */
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons li {
+    margin: 0 15px; 
+  }
+  
+  .social-icons i {
+    font-size: 2rem; 
+    color: var(--bs-secondary);
+  }
+
+
+
 
 /**************** Tablet and Desktop style ****************/
 @media screen and (min-width: 767px) {
