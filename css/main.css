@@ -13,12 +13,12 @@
   --accent-dark: #7f8c8d;
   --accent-light: #bdc3c7;
   --text-primary: #2c3e50;
-  --text-secondary: #7f8c8d;
+  --text-secondary: #4a4a4a;
   --text-light: #bdc3c7;
   --bg-primary: #fefcf4;
-  --bg-secondary: #fdfbfb;
+  --bg-secondary: #ffffff;
   --bg-dark: #3843d0;
-  --footer-bg: #ffc466; /* Secondary color */
+  --footer-bg: #fefcf4; /* Secondary color */
   --footer-text: #2c3e50; /* Dark text for footer */
   --border-color: #e9ecef;
   --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -357,7 +357,7 @@ position: relative;
 
 /* TV Showcase Section */
 .tv-showcase {
-  background: var(--bg-primary);
+  /* background: var(--bg-primary); */
   position: relative;
   overflow: hidden;
 }
@@ -374,7 +374,7 @@ position: relative;
     left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 224, 97, 0.1) 0%, transparent 70%);
+  background: var(--secondary-color);
   pointer-events: none;
 }
 
@@ -384,15 +384,15 @@ position: relative;
   width: 100%;
   max-width: 600px;
   aspect-ratio: 16/10;
-  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-  border: 3px solid #6c757d;
+  background: linear-gradient(135deg, #42474c 0%, #495057 100%);
+  border: 1px solid #6c757d;
   border-radius: 20px;
   box-shadow: 
     0 20px 40px rgba(108, 117, 125, 0.3),
     0 8px 16px rgba(108, 117, 125, 0.2),
     inset 0 2px 4px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+  /* transform: perspective(1000px) rotateX(5deg) rotateY(-5deg); */
   transition: all 0.3s ease;
 }
 
@@ -448,7 +448,6 @@ position: relative;
   height: 4px;
   background: #6c757d;
   border-radius: 50%;
-  box-shadow: 0 0 4px rgba(108, 117, 125, 0.5);
 }
 
 .tv-antenna {
@@ -667,8 +666,8 @@ position: relative;
     transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
-  opacity: 0.15;
-  filter: blur(1px);
+  opacity: 0.2;
+  filter: blur(0.5px);
 }
 
 .floating-svg circle {
@@ -796,7 +795,7 @@ position: relative;
 
 /* Featured Work Section */
 .featured-work {
-  background-color: transparent;
+  background-color: var(--secondary-color);
 }
 
 .featured-project-card {
@@ -807,11 +806,16 @@ position: relative;
   transition: var(--transition-normal);
   height: 100%;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .featured-project-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-large);
+  text-decoration: none;
+  color: inherit;
 }
 
 .featured-project-card a {
@@ -900,7 +904,7 @@ footer i {
 }
 
 footer i:hover {
-  color: var(--primary-color);
+  color: var(--secondary-dark);
   transform: translateY(-2px);
 }
 
@@ -941,12 +945,17 @@ footer p {
   position: relative;
   border: 1px solid var(--border-color);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .work-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-large);
   border-color: var(--primary-color);
+  text-decoration: none;
+  color: inherit;
 }
 
 .work-card a {
@@ -957,7 +966,7 @@ footer p {
 }
 
 .work-card.featured {
-  border: 2px solid var(--primary-color);
+  border: 1.5px solid var(--primary-color);
   box-shadow: var(--shadow-medium);
 }
 
@@ -980,7 +989,7 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(189, 32, 37, 0.9);
+  background: rgba(91, 100, 223, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1050,8 +1059,8 @@ footer p {
 
 /* Filter Tabs */
 .filter-section {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
 .filter-tabs {
@@ -1083,7 +1092,7 @@ footer p {
 
 /* CTA Section */
 .cta-section {
-  background: transparent;
+  background: var(--bg-secondary);
 }
 
 .cta-section .section-title {
@@ -1190,6 +1199,11 @@ footer p {
 
 .expertise-card li:last-child {
   border-bottom: none;
+}
+
+/* experience-section */
+.experience-section {
+  background-color: var(--secondary-color);
 }
 
 /* Timeline */

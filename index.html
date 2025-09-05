@@ -205,12 +205,12 @@
                     />
 
                     <!-- Cat Eyes -->
-                    <ellipse class="cat-eye" cx="115" cy="95" rx="8" ry="12" />
-                    <ellipse class="cat-eye" cx="135" cy="95" rx="8" ry="12" />
+                    <ellipse class="cat-eye" cx="115" cy="95" rx="8" ry="8" />
+                    <ellipse class="cat-eye" cx="135" cy="95" rx="8" ry="8" />
 
                     <!-- Eye pupils -->
-                    <ellipse class="cat-pupil" cx="115" cy="95" rx="3" ry="6" />
-                    <ellipse class="cat-pupil" cx="135" cy="95" rx="3" ry="6" />
+                    <ellipse class="cat-pupil" cx="115" cy="95" rx="3" ry="4" />
+                    <ellipse class="cat-pupil" cx="135" cy="95" rx="3" ry="4" />
 
                     <!-- Eye highlights -->
                     <ellipse fill="#ffffff" cx="116" cy="93" rx="1.5" ry="2" />
@@ -486,22 +486,6 @@
               <div
                 class="col-12 col-md-4"
                 data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div class="skill-card">
-                  <div class="skill-icon">
-                    <i class="bi bi-palette"></i>
-                  </div>
-                  <h3>UI Design</h3>
-                  <p>
-                    Creating beautiful, functional interfaces that delight users
-                    and drive engagement.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="col-12 col-md-4"
-                data-aos="fade-up"
                 data-aos-delay="200"
               >
                 <div class="skill-card">
@@ -515,6 +499,24 @@
                   </p>
                 </div>
               </div>
+
+              <div
+                class="col-12 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="bi bi-palette"></i>
+                  </div>
+                  <h3>UI Design</h3>
+                  <p>
+                    Creating beautiful, functional interfaces that delight users
+                    and drive engagement.
+                  </p>
+                </div>
+              </div>
+
               <div
                 class="col-12 col-md-4"
                 data-aos="fade-up"
@@ -536,7 +538,7 @@
         </section>
 
         <!-- Featured Work Preview -->
-        <section class="featured-work py-5 bg-light">
+        <section class="featured-work py-5">
           <div class="container">
             <div class="row">
               <div class="col-12 text-center mb-5" data-aos="fade-up">
@@ -548,7 +550,7 @@
             </div>
             <div class="row g-4">
               <div class="col-12 col-lg-6" data-aos="fade-right">
-                <div class="featured-project-card">
+                <a href="w-mentalhealthapp.html" class="featured-project-card">
                   <div class="project-image">
                     <img
                       src="images3/mentalhealth/0-cover1.png"
@@ -556,9 +558,7 @@
                       class="img-fluid"
                     />
                     <div class="project-overlay">
-                      <a href="w-mentalhealthapp.html" class="btn btn-white"
-                        >View Study</a
-                      >
+                      <span class="btn btn-white">View Project</span>
                     </div>
                   </div>
                   <div class="project-content">
@@ -573,10 +573,10 @@
                       <span class="tag">Prototyping</span>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="col-12 col-lg-6" data-aos="fade-left">
-                <div class="featured-project-card">
+                <a href="w-tripagog.html" class="featured-project-card">
                   <div class="project-image">
                     <img
                       src="images3/tripagog/0-cover1.png"
@@ -584,9 +584,7 @@
                       class="img-fluid"
                     />
                     <div class="project-overlay">
-                      <a href="w-tripagog.html" class="btn btn-white"
-                        >View Site</a
-                      >
+                      <span class="btn btn-white">View Project</span>
                     </div>
                   </div>
                   <div class="project-content">
@@ -601,12 +599,14 @@
                       <span class="tag">Usability Testing</span>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-12 text-center" data-aos="fade-up">
-                <a href="work.html" class="btn btn-outline-primary btn-lg"
+                <a
+                  href="work.html"
+                  class="btn btn-outline-primary btn-lg btn-white"
                   >View All Projects</a
                 >
               </div>
@@ -619,7 +619,7 @@
 
       <footer
         role="contentinfo"
-        class="bg-dark d-flex justify-content-center align-items-center"
+        class="d-flex justify-content-center align-items-center"
       >
         <div class="container">
           <div class="row text-center">
@@ -645,7 +645,9 @@
             </div>
 
             <div class="col-12 col-md-6 text-md-start">
-              <p class="px-3 py-3">&copy; 2025 Emma Labo All Rights Reserved</p>
+              <p class="px-3 py-3 small">
+                &copy; 2025 Emma Labo All Rights Reserved
+              </p>
             </div>
           </div>
         </div>
