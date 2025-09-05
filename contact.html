@@ -3,25 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emma Labo</title>
+    <title>Contact Emma Wong - UX/UI Designer</title>
+    <meta
+      name="description"
+      content="Get in touch with Emma Wong, UX/UI Designer. Let's discuss your next project and create amazing digital experiences together."
+    />
 
     <!-- 0. Font style  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- 0. css library BULMA -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
-    />
+    <!-- Using system Avenir; no external font link needed -->
 
     <!-- 1. bootstrap css -->
     <link
@@ -30,6 +21,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- 2. icon css -->
     <link
@@ -71,7 +65,7 @@
             <a class="navbar-brand mx-3" href="index.html">
               <img
                 role="img"
-                src="images/0_logo.svg"
+                src="images3/EmmaLabo.png"
                 width="230"
                 alt="Emma Labo logo image"
                 class="logo"
@@ -125,154 +119,225 @@
         </nav>
       </header>
 
-      <main role="main" class="min-vh-100" id="main-content">
-        <div class="position-relative">
-          <h1
-            role="heading"
-            aria-level="1"
-            class="col-12 text-center text-md-start px-md-5 py-5"
-          >
-            Contact Emma Labo
-          </h1>
-          <!-- image -->
-          <div
-            class="col-8 col-md-3 ms-md-0 me-md-auto d-none d-md-block position-fixed bottom-0 start-0 mb-5 mb-md-5"
-          >
-            <img
-              src="images/0_yellow-rectangle.svg"
-              alt="Yellow restangle for background decoration"
-              class="img-fluid image"
-              style="width: 80%"
-            />
+      <main role="main" id="main-content">
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center" data-aos="fade-up">
+                <h1 class="section-title">Let's Work Together</h1>
+                <p class="section-subtitle">
+                  Ready to create something amazing? I'd love to hear from you.
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div
-            class="col-10 col-md-3 ms-auto me-md-0 d-none d-md-block position-fixed bottom-0 end-0"
-          >
-            <picture>
-              <source
-                srcset="images2/0_contact-small.png"
-                media="(max-width:767px)"
-              />
+        <!-- Contact Content -->
+        <section class="contact-content py-5">
+          <div class="container">
+            <div class="row">
+              <!-- Contact Info -->
+              <div class="col-12 col-lg-6" data-aos="fade-right">
+                <div class="contact-info">
+                  <h2 class="section-title text-start">Get In Touch</h2>
+                  <p class="lead">
+                    I'm always excited to discuss new projects and
+                    opportunities. Whether you have a specific project in mind
+                    or just want to chat about design, feel free to reach out!
+                  </p>
 
-              <source
-                srcset="images2/0_contact-large.png"
-                media="(min-width:768px)"
-              />
+                  <div class="contact-methods">
+                    <div
+                      class="contact-item"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
+                      <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>emmawolke365@gmail.com</p>
+                        <a
+                          href="mailto:emmawolke365@gmail.com"
+                          class="contact-link"
+                          >Send me an email</a
+                        >
+                      </div>
+                    </div>
 
-              <img
-                role="img"
-                src="images/0_contact.png"
-                alt="Contact me photo"
-                class="img-fluid image"
-              />
-            </picture>
+                    <div
+                      class="contact-item"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    >
+                      <div class="contact-icon">
+                        <i class="bi bi-telephone"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p>+1 437-662-8329</p>
+                        <a href="tel:+14376628329" class="contact-link"
+                          >Call me</a
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="contact-item"
+                      data-aos="fade-up"
+                      data-aos-delay="300"
+                    >
+                      <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                      </div>
+                      <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>Ottawa, Canada</p>
+                        <span class="contact-link"
+                          >Available for remote work</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="social-links"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                      <a
+                        href="https://www.instagram.com/em__831/"
+                        target="_blank"
+                        aria-label="Instagram"
+                      >
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a
+                        href="https://wa.me/85265908329"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                      >
+                        <i class="bi bi-whatsapp"></i>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                      >
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div class="col-12 col-lg-6" data-aos="fade-left">
+                <div class="contact-form-wrapper">
+                  <h2 class="section-title text-start">Send a Message</h2>
+                  <form
+                    class="contact-form"
+                    id="contactForm"
+                    itemscope
+                    itemtype="https://schema.org/ContactPoint"
+                  >
+                    <div class="form-group">
+                      <label for="name" class="form-label">Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Your full name"
+                        itemprop="name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email *</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="your.email@example.com"
+                        itemprop="email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="subject" class="form-label">Subject *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        name="subject"
+                        required
+                        placeholder="What's this about?"
+                        itemprop="subjectOf"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message" class="form-label">Message *</label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        placeholder="Tell me about your project or idea..."
+                        itemprop="toRecipient"
+                      ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-lg w-100"
+                      >
+                        Send Message <i class="bi bi-send ms-2"></i>
+                      </button>
+                    </div>
+
+                    <div class="form-note">
+                      <small class="text-muted">
+                        * Required fields. I'll get back to you within 24 hours.
+                      </small>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div class="contact-section text-center">
-            <p>
-              Feel free to reach out to me for any inquiries, or just to
-              connect. I'm always open to discussing new ideas.
-            </p>
-
-            <p>
-              <strong>Email:</strong>
-              <a href="mailto:emmawolke365@gmail.com">emmawolke365@gmail.com</a>
-            </p>
-            <p><strong>Phone:</strong> +1 437-662-8329</p>
-            <p><strong>Location:</strong> Ottawa, Canada</p>
-
-            <p><strong>Social Media:</strong></p>
-            <ul class="social-icons">
-              <li>
-                <a href="https://wa.me/85265908329" target="_blank"
-                  ><i class="bi bi-whatsapp"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://instagram.com/em__831" target="_blank"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- contact form from css library -->
-
-          <!-- <div
-            class="content-form col-10 mx-auto col-md-8 col-lg-5 border rounded p-4 border-black mb-5"
-            itemscope
-            itemtype="https://schema.org/ContactPoint"
-          >
-            <div class="field py-2">
-              <label for="fullname" class="label has-text-black">Name</label>
-              <div class="control">
-                <input
-                  aria-label="Add Full Name"
-                  class="input border-black has-background-white"
-                  id="fullname"
-                  type="text"
-                  placeholder="Your name"
-                  itemprop="name"
-                />
-              </div>
-            </div>
-
-            <div class="field py-2">
-              <label for="youremail" class="label has-text-black">Email</label>
-              <div class="control">
-                <input
-                  aria-label="Add your email"
-                  class="input border-black has-background-white"
-                  id="youremail"
-                  type="text"
-                  placeholder="Your Email"
-                  itemprop="email"
-                />
-              </div>
-            </div>
-
-            <div class="field py-2">
-              <label for="subject" class="label has-text-black">Subject</label>
-              <div class="control">
-                <input
-                  aria-label="Add the subject"
-                  class="input border-black has-background-white"
-                  id="subject"
-                  type="text"
-                  placeholder="Text input"
-                  itemprop="subjectOf"
-                />
-              </div>
-            </div>
-
-            <div class="field py-2">
-              <label for="yourmessage" class="label has-text-black"
-                >Message</label
-              >
-              <div class="control">
-                <textarea
-                  aria-label="Add your message"
-                  class="textarea border-black has-background-white"
-                  id="yourmessage"
-                  placeholder="Your Message"
-                  itemprop="toRecipient"
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="field is-grouped">
-              <div class="control">
-                <button
-                  role="button"
-                  class="btn btn-outline-primary my-3 px-4 py-2 rounded-20 fw-medium"
+        <!-- CTA Section -->
+        <section class="cta-section py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center" data-aos="fade-up">
+                <h2 class="section-title">Ready to Start Your Project?</h2>
+                <p class="section-subtitle">
+                  Let's create something amazing together
+                </p>
+                <a href="work.html" class="btn btn-outline-primary btn-lg me-3"
+                  >View My Work</a
                 >
-                  Submit
-                </button>
+                <a href="about.html" class="btn btn-primary btn-lg"
+                  >Learn More About Me</a
+                >
               </div>
             </div>
-          </div> -->
-        </div>
+          </div>
+        </section>
       </main>
 
       <!-- footer section -->
@@ -318,6 +383,54 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
       ></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+        });
+
+        // Contact form handling
+        document.addEventListener("DOMContentLoaded", function () {
+          const contactForm = document.getElementById("contactForm");
+
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const subject = formData.get("subject");
+            const message = formData.get("message");
+
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+              alert("Please fill in all required fields.");
+              return;
+            }
+
+            // Create mailto link
+            const mailtoLink = `mailto:emmawolke365@gmail.com?subject=${encodeURIComponent(
+              subject
+            )}&body=${encodeURIComponent(
+              `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            )}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            alert(
+              "Thank you for your message! Your email client should open with a pre-filled message. Please send it to complete the contact process."
+            );
+
+            // Reset form
+            contactForm.reset();
+          });
+        });
+      </script>
     </div>
   </body>
 </html>

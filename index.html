@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emma Labo</title>
+    <title>Emma Wong - UX/UI Designer</title>
+    <meta
+      name="description"
+      content="Emma Wong - UX/UI Designer specializing in user-centered design, interactive media, and creating intuitive digital experiences."
+    />
 
     <!-- 0. Font style  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Using system Avenir; no external font link needed -->
+
     <!-- 1. bootstrap css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -23,11 +25,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- css library - animate style -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- 2. icon css -->
     <link
@@ -69,7 +69,7 @@
             <a class="navbar-brand mx-3" href="index.html">
               <img
                 role="img"
-                src="images/0_logo.svg"
+                src="images3/EmmaLabo.png"
                 width="230"
                 alt="Emma Labo logo image"
                 class="logo"
@@ -96,25 +96,25 @@
               <ul class="navbar-nav">
                 <li class="nav-item px-5 py-3">
                   <a
-                    class="nav-link active px-4 py-2.5 rounded-2"
+                    class="nav-link active px-2 py-1.5 rounded-2"
                     aria-current="page"
                     href="index.html"
                     >Home</a
                   >
                 </li>
                 <li class="nav-item px-5 py-3">
-                  <a class="nav-link px-4 py-2.5 rounded-2" href="work.html"
+                  <a class="nav-link px-2 py-1.5 rounded-2" href="work.html"
                     >Work</a
                   >
                 </li>
                 <li class="nav-item px-5 py-3">
-                  <a class="nav-link px-4 py-2.5 rounded-2" href="about.html"
+                  <a class="nav-link px-4 py-1.5 rounded-2" href="about.html"
                     >About</a
                   >
                 </li>
 
                 <li class="nav-item px-5 py-3">
-                  <a class="nav-link px-4 py-2.5 rounded-2" href="contact.html"
+                  <a class="nav-link px-4 py-1.5 rounded-2" href="contact.html"
                     >Contact</a
                   >
                 </li>
@@ -124,58 +124,495 @@
         </nav>
       </header>
 
-      <main role="main" class="min-vh-100" id="main-content">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-5 order-md-2 mt-4 me-md-auto">
-            <div class="card border-0 rounded-0">
-              <div class="card-body home-main">
-                <img
-                  role="img"
-                  src="images/0_home-pic.svg"
-                  alt="A cat picture on home page"
-                  class="animate__animated animate__zoomIn"
-                />
+      <main role="main" id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="container">
+            <div
+              class="row min-vh-100 align-items-center justify-content-center"
+            >
+              <!-- Left Side - Cat SVG -->
+              <div
+                class="col-12 col-lg-3 d-none d-lg-block"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <div class="hero-side-element hero-cat">
+                  <svg
+                    class="cat-svg"
+                    viewBox="0 0 250 250"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <style>
+                        .cat-head {
+                          fill: #ffc466;
+                          animation: catFloat 6s ease-in-out infinite 0.5s;
+                        }
+                        .cat-body {
+                          fill: #3843d0;
+                          animation: catFloat 6s ease-in-out infinite;
+                        }
+                        .cat-ear {
+                          fill: #2c3e50;
+                          animation: catFloat 6s ease-in-out infinite 1s;
+                        }
+                        .cat-ear-inner {
+                          fill: #ffc466;
+                        }
+                        .cat-eye {
+                          fill: #2c3e50;
+                        }
+                        .cat-pupil {
+                          fill: #ffffff;
+                        }
+                        .cat-nose {
+                          fill: #e74c3c;
+                        }
+                        .cat-mouth {
+                          fill: #2c3e50;
+                        }
+                        .cat-whisker {
+                          stroke: #2c3e50;
+                          stroke-width: 1.5;
+                          fill: none;
+                        }
+                        .cat-tail {
+                          fill: #3843d0;
+                        }
+                        .cat-paws {
+                          fill: #ffc466;
+                        }
+                      </style>
+                    </defs>
+                    <!-- Refined Cat Design -->
+
+                    <!-- Cat Head -->
+                    <circle class="cat-head" cx="125" cy="100" r="35" />
+
+                    <!-- Cat Ears -->
+                    <polygon class="cat-ear" points="100,70 110,50 120,70" />
+                    <polygon class="cat-ear" points="130,70 140,50 150,70" />
+
+                    <!-- Inner ears -->
+                    <polygon
+                      class="cat-ear-inner"
+                      points="105,65 110,58 115,65"
+                    />
+                    <polygon
+                      class="cat-ear-inner"
+                      points="135,65 140,58 145,65"
+                    />
+
+                    <!-- Cat Eyes -->
+                    <ellipse class="cat-eye" cx="115" cy="95" rx="8" ry="12" />
+                    <ellipse class="cat-eye" cx="135" cy="95" rx="8" ry="12" />
+
+                    <!-- Eye pupils -->
+                    <ellipse class="cat-pupil" cx="115" cy="95" rx="3" ry="6" />
+                    <ellipse class="cat-pupil" cx="135" cy="95" rx="3" ry="6" />
+
+                    <!-- Eye highlights -->
+                    <ellipse fill="#ffffff" cx="116" cy="93" rx="1.5" ry="2" />
+                    <ellipse fill="#ffffff" cx="136" cy="93" rx="1.5" ry="2" />
+
+                    <!-- Cat Nose -->
+                    <polygon
+                      class="cat-nose"
+                      points="125,105 120,112 130,112"
+                    />
+
+                    <!-- Cat Mouth -->
+                    <path class="cat-mouth" d="M125,112 Q120,116 115,112" />
+                    <path class="cat-mouth" d="M125,112 Q130,116 135,112" />
+
+                    <!-- Whiskers -->
+                    <line
+                      class="cat-whisker"
+                      x1="90"
+                      y1="100"
+                      x2="75"
+                      y2="95"
+                    />
+                    <line
+                      class="cat-whisker"
+                      x1="90"
+                      y1="105"
+                      x2="73"
+                      y2="105"
+                    />
+                    <line
+                      class="cat-whisker"
+                      x1="90"
+                      y1="110"
+                      x2="75"
+                      y2="115"
+                    />
+                    <line
+                      class="cat-whisker"
+                      x1="160"
+                      y1="100"
+                      x2="175"
+                      y2="95"
+                    />
+                    <line
+                      class="cat-whisker"
+                      x1="160"
+                      y1="105"
+                      x2="177"
+                      y2="105"
+                    />
+                    <line
+                      class="cat-whisker"
+                      x1="160"
+                      y1="110"
+                      x2="175"
+                      y2="115"
+                    />
+
+                    <!-- Cat Body -->
+                    <ellipse
+                      class="cat-body"
+                      cx="125"
+                      cy="170"
+                      rx="40"
+                      ry="30"
+                    />
+
+                    <!-- Cat Tail -->
+                    <path
+                      class="cat-tail"
+                      d="M165,170 Q185,150 200,170 Q185,190 165,170"
+                    />
+
+                    <!-- Front Paws -->
+                    <ellipse
+                      class="cat-paws"
+                      cx="100"
+                      cy="200"
+                      rx="10"
+                      ry="7"
+                    />
+                    <ellipse
+                      class="cat-paws"
+                      cx="150"
+                      cy="200"
+                      rx="10"
+                      ry="7"
+                    />
+
+                    <!-- Back Paws -->
+                    <ellipse class="cat-paws" cx="110" cy="205" rx="8" ry="5" />
+                    <ellipse class="cat-paws" cx="140" cy="205" rx="8" ry="5" />
+
+                    <!-- Paw Details -->
+                    <ellipse fill="#2c3e50" cx="100" cy="205" rx="2" ry="1.5" />
+                    <ellipse fill="#2c3e50" cx="150" cy="205" rx="2" ry="1.5" />
+                    <ellipse fill="#2c3e50" cx="110" cy="210" rx="1.5" ry="1" />
+                    <ellipse fill="#2c3e50" cx="140" cy="210" rx="1.5" ry="1" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Center - Main Content -->
+              <div
+                class="col-12 col-lg-6"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <div class="hero-content text-center">
+                  <h1
+                    class="hero-title"
+                    itemscope
+                    itemtype="https://schema.org/Person"
+                  >
+                    <span class="greeting"
+                      ><span id="hello-rotator" class="rotating-greeting"
+                        >Hello</span
+                      >, I'm</span
+                    >
+                    <span class="name" itemprop="name">Emma Wong</span>
+                    <div class="hero-badge">
+                      <span class="badge-text">UXUI Designer</span>
+                    </div>
+                  </h1>
+                  <p class="hero-description mx-auto">
+                    A passionate UX/UI designer dedicated to creating meaningful
+                    digital experiences. I specialize in user-centered design,
+                    transforming complex problems into intuitive solutions that
+                    users love.
+                  </p>
+                  <div class="hero-actions">
+                    <a
+                      href="work.html"
+                      class="btn btn-primary btn-lg me-3"
+                      aria-label="View my work"
+                    >
+                      View My Work <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <a
+                      href="contact.html"
+                      class="btn btn-outline-primary btn-lg"
+                      aria-label="Get in touch"
+                    >
+                      Get In Touch
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Side - Contact Image -->
+              <div
+                class="col-12 col-lg-3 d-none d-lg-block"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <div class="hero-side-element hero-contact">
+                  <img
+                    src="images/0_contact.png"
+                    alt="Contact"
+                    class="contact-image"
+                  />
+                </div>
               </div>
             </div>
+            <div class="scroll-indicator"></div>
           </div>
 
-          <div
-            class="col-12 col-md-5 col-lg-5 mt-4 ms-md-auto d-flex align-items-center"
-          >
-            <div
-              class="card border-0 rounded-0"
-              itemscope
-              itemtype="https://schema.org/Person"
+          <!-- Floating SVG Elements -->
+          <div class="floating-svg-container">
+            <svg
+              class="floating-svg"
+              viewBox="0 0 809.99 718.88"
+              xmlns="http://www.w3.org/2000/svg"
             >
+              <defs>
+                <style>
+                  .floating-circle-1 {
+                    fill: #3843d0;
+                    animation: floatCircle1 8s ease-in-out infinite;
+                  }
+                  .floating-circle-2 {
+                    fill: #2c3e50;
+                    animation: floatCircle2 6s ease-in-out infinite;
+                  }
+                  .floating-circle-3 {
+                    fill: #3843d0;
+                    animation: floatCircle3 7s ease-in-out infinite;
+                  }
+                  .floating-circle-4 {
+                    fill: #2c3e50;
+                    animation: floatCircle4 9s ease-in-out infinite;
+                  }
+                  .floating-circle-5 {
+                    fill: #ffc466;
+                    animation: floatCircle5 5s ease-in-out infinite;
+                  }
+                  .floating-circle-6 {
+                    fill: #ffc466;
+                    animation: floatCircle6 6.5s ease-in-out infinite;
+                  }
+                </style>
+              </defs>
+              <circle
+                class="floating-circle-1"
+                cx="541.72"
+                cy="609.86"
+                r="109"
+              />
+              <circle
+                class="floating-circle-2"
+                cx="257.46"
+                cy="79.1"
+                r="79.1"
+              />
+              <circle class="floating-circle-3" cx="109" cy="125.5" r="109" />
+              <circle class="floating-circle-4" cx="694" cy="631.22" r="79.1" />
+              <circle
+                class="floating-circle-5"
+                cx="667.01"
+                cy="447.08"
+                r="142.98"
+              />
+              <circle
+                class="floating-circle-6"
+                cx="200.13"
+                cy="254.57"
+                r="142.98"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <!-- TV Showcase Section -->
+        <section class="tv-showcase py-5">
+          <div class="container">
+            <div class="row justify-content-center">
               <div
-                class="card-body home-text animate__animated animate__zoomIn"
+                class="col-12 col-lg-6 text-center"
+                data-aos="fade-up"
+                data-aos-delay="300"
               >
-                <h1
-                  role="heading"
-                  aria-level="1"
-                  class="card-title lh-lg"
-                  itemprop="name"
-                >
-                  Hi, I'm Emma.
-                </h1>
-                <p class="card-text lh-lg">
-                  A student of interactive media design who is dedicated to
-                  becoming a UX designer. The design of UX concepts is connected
-                  to human behaviour. By understanding users' needs and
-                  behaviors, I aim to design services or products that people
-                  can intuitively use, enabling them to achieve their goals
-                  effectively while providing a satisfying experience.
-                </p>
-                <a
-                  href="work.html"
-                  aria-label="visit work page"
-                  class="btn btn-outline-primary my-4 px-4 py-3 rounded-20"
-                  >Check out my work <i class="bi bi-caret-right-fill"></i
-                ></a>
+                <div class="tv-container">
+                  <div class="tv-frame">
+                    <div class="tv-screen">
+                      <img
+                        id="tv-slideshow"
+                        src="images3/mentalhealth/0-cover1.png"
+                        alt="Project Showcase"
+                      />
+                    </div>
+                    <div class="tv-knobs"></div>
+                    <div class="tv-antenna"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-subtitle">
+                  Crafting digital experiences that matter
+                </p>
+              </div>
+            </div>
+            <div class="row g-4">
+              <div
+                class="col-12 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="bi bi-palette"></i>
+                  </div>
+                  <h3>UI Design</h3>
+                  <p>
+                    Creating beautiful, functional interfaces that delight users
+                    and drive engagement.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="bi bi-person-gear"></i>
+                  </div>
+                  <h3>UX Research</h3>
+                  <p>
+                    Understanding user needs through research, testing, and
+                    data-driven insights.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="skill-card">
+                  <div class="skill-icon">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <h3>Prototyping</h3>
+                  <p>
+                    Bringing ideas to life with interactive prototypes and user
+                    testing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Work Preview -->
+        <section class="featured-work py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">
+                  A glimpse into my latest projects
+                </p>
+              </div>
+            </div>
+            <div class="row g-4">
+              <div class="col-12 col-lg-6" data-aos="fade-right">
+                <div class="featured-project-card">
+                  <div class="project-image">
+                    <img
+                      src="images3/mentalhealth/0-cover1.png"
+                      alt="Mental Health App UX/UI"
+                      class="img-fluid"
+                    />
+                    <div class="project-overlay">
+                      <a href="w-mentalhealthapp.html" class="btn btn-white"
+                        >View Study</a
+                      >
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Mental Health Apps</h3>
+                    <p>
+                      End-to-end UX/UI process from research to high-fidelity
+                      design
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">UX Research</span>
+                      <span class="tag">UI Design</span>
+                      <span class="tag">Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6" data-aos="fade-left">
+                <div class="featured-project-card">
+                  <div class="project-image">
+                    <img
+                      src="images3/tripagog/0-cover1.png"
+                      alt="Tripagog Website Redesign"
+                      class="img-fluid"
+                    />
+                    <div class="project-overlay">
+                      <a href="w-tripagog.html" class="btn btn-white"
+                        >View Site</a
+                      >
+                    </div>
+                  </div>
+                  <div class="project-content">
+                    <h3>Tripagog Website</h3>
+                    <p>
+                      Real-client redesign: personas, flows, lofi to hifi, and
+                      delivery
+                    </p>
+                    <div class="project-tags">
+                      <span class="tag">Heuristics</span>
+                      <span class="tag">UI System</span>
+                      <span class="tag">Usability Testing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 text-center" data-aos="fade-up">
+                <a href="work.html" class="btn btn-outline-primary btn-lg"
+                  >View All Projects</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- footer section -->
@@ -208,7 +645,7 @@
             </div>
 
             <div class="col-12 col-md-6 text-md-start">
-              <p class="px-3 py-3">&copy; 2024 Emma Labo All Rights Reserved</p>
+              <p class="px-3 py-3">&copy; 2025 Emma Labo All Rights Reserved</p>
             </div>
           </div>
         </div>
@@ -219,6 +656,44 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
       ></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+        });
+
+        // Rotating greetings
+        const greetings = [
+          "Hello", // English
+          "你好", // Traditional Chinese
+          "こんにちは", // Japanese
+          "Hola", // Spanish
+          "Bonjour", // French
+        ];
+        const helloEl = document.getElementById("hello-rotator");
+        let greetIdx = 0;
+        setInterval(() => {
+          greetIdx = (greetIdx + 1) % greetings.length;
+          if (helloEl) helloEl.textContent = greetings[greetIdx];
+        }, 900);
+
+        // TV slideshow
+        const tvEl = document.getElementById("tv-slideshow");
+        const tvSlides = [
+          "images3/mentalhealth/0-cover1.png",
+          "images3/travelgigs/0-cover.png",
+          "images3/tripagog/0-cover1.png",
+          "images3/brochure/0-cover.png",
+          "images3/businesscard/0-cover.png",
+        ];
+        let tvIdx = 0;
+        setInterval(() => {
+          tvIdx = (tvIdx + 1) % tvSlides.length;
+          if (tvEl) tvEl.src = tvSlides[tvIdx];
+        }, 1600);
+      </script>
     </div>
   </body>
 </html>
