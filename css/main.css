@@ -130,12 +130,12 @@ p {
   background-color: #ffffff !important;
   backdrop-filter: none;
   border-bottom: 1px solid var(--border-color);
-  padding: 0.5rem 0;
+  padding: 0.1rem 0;
   transition: var(--transition-normal);
 }
 
 .navbar-brand img {
-  height: 100px;
+  height: 110px;
   width: auto;
   transition: var(--transition-normal);
 }
@@ -904,7 +904,7 @@ position: relative;
 footer {
   background-color: var(--footer-bg) !important;
   color: var(--footer-text);
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 2rem;
 }
 
 footer i {
@@ -2249,6 +2249,285 @@ footer p {
   box-shadow: var(--shadow-large);
 }
 
+/* Welcome Image Styles */
+.welcome-image {
+  width: 115px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+}
+
+.welcome-image:hover {
+  transform: scale(1.05);
+}
+
+/* About Page Slideshow */
+.about-slideshow-image {
+  width:auto;
+  height:auto;
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+}
+
+/* Journey Animals Styles */
+.timeline-animal {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  opacity: 0.8;
+}
+
+.timeline-animal-left {
+  right: auto;
+  left: -100px;
+}
+
+.journey-animal-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Animal Float Animations */
+@keyframes catFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes whaleFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-5px) translateX(3px);
+  }
+}
+
+@keyframes raccoonFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+@keyframes foxFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-7px) scale(1.02);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Timeline Animal Right Position */
+.timeline-animal-right {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* transform: translateX(100%); */
+  width: 120px;
+  height: 120px;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Star Animation */
+.journey-with-snow {
+  position: relative;
+  overflow: hidden;
+}
+
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  opacity: 0.9;
+  animation: starTwinkle linear infinite;
+}
+
+.star:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+  left: 20%;
+  top: 10%;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+}
+
+.star:nth-child(3) {
+  left: 30%;
+  top: 30%;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.star:nth-child(4) {
+  left: 40%;
+  top: 15%;
+  animation-duration: 3.5s;
+  animation-delay: 1.5s;
+}
+
+.star:nth-child(5) {
+  left: 50%;
+  top: 25%;
+  animation-duration: 2.8s;
+  animation-delay: 0.2s;
+}
+
+.star:nth-child(6) {
+  left: 60%;
+  top: 35%;
+  animation-duration: 3.2s;
+  animation-delay: 2s;
+}
+
+.star:nth-child(7) {
+  left: 70%;
+  top: 20%;
+  animation-duration: 4.5s;
+  animation-delay: 0.8s;
+}
+
+.star:nth-child(8) {
+  left: 80%;
+  top: 10%;
+  animation-duration: 2.2s;
+  animation-delay: 1.2s;
+}
+
+.star:nth-child(9) {
+  left: 90%;
+  top: 30%;
+  animation-duration: 3.8s;
+  animation-delay: 0.3s;
+}
+
+.star:nth-child(10) {
+  left: 15%;
+  top: 40%;
+  animation-duration: 2.6s;
+  animation-delay: 2.5s;
+}
+
+.star:nth-child(11) {
+  left: 25%;
+  top: 5%;
+  animation-duration: 3.3s;
+  animation-delay: 1.8s;
+}
+
+.star:nth-child(12) {
+  left: 35%;
+  top: 45%;
+  animation-duration: 4.2s;
+  animation-delay: 0.7s;
+}
+
+.star:nth-child(13) {
+  left: 45%;
+  top: 8%;
+  animation-duration: 2.9s;
+  animation-delay: 2.2s;
+}
+
+.star:nth-child(14) {
+  left: 55%;
+  top: 50%;
+  animation-duration: 3.6s;
+  animation-delay: 0.4s;
+}
+
+.star:nth-child(15) {
+  left: 65%;
+  top: 12%;
+  animation-duration: 2.4s;
+  animation-delay: 1.6s;
+}
+
+.star:nth-child(16) {
+  left: 75%;
+  top: 38%;
+  animation-duration: 4.1s;
+  animation-delay: 0.9s;
+}
+
+.star:nth-child(17) {
+  left: 85%;
+  top: 22%;
+  animation-duration: 3.1s;
+  animation-delay: 2.8s;
+}
+
+.star:nth-child(18) {
+  left: 95%;
+  top: 48%;
+  animation-duration: 2.7s;
+  animation-delay: 1.4s;
+}
+
+.star:nth-child(19) {
+  left: 5%;
+  top: 18%;
+  animation-duration: 3.9s;
+  animation-delay: 0.6s;
+}
+
+.star:nth-child(20) {
+  left: 12%;
+  top: 42%;
+  animation-duration: 2.3s;
+  animation-delay: 2.1s;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-image-row {
@@ -2273,6 +2552,31 @@ footer p {
   
   .wireframe-image {
     max-width: 250px;
+  }
+  
+  .welcome-image {
+    width: 150px;
+  }
+  
+  .timeline-animal {
+    position: static;
+    transform: none;
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto;
+    opacity: 1;
+    right: auto;
+    left: auto;
+  }
+  
+  .timeline-animal-left {
+    left: auto;
+    right: auto;
+  }
+  
+  .timeline-animal-right {
+    right: auto;
+    left: auto;
   }
 }
 
