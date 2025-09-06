@@ -723,7 +723,7 @@ position: relative;
 }
 
 .contact-image {
-  width: 280px;
+  width: auto;
   height: auto;
   transition: all 0.3s ease;
   opacity: 0.9;
@@ -1396,6 +1396,28 @@ footer p {
   font-size: 1.25rem;
 }
 
+.hero-cta {
+  margin-top: 1.5rem;
+}
+
+.contact-illustration {
+  padding: 2rem 0;
+}
+
+.contact-image {
+  max-width: 50%;
+  height: auto;
+  max-height: 200px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.contact-image:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 .contact-content {
   background-color: var(--bg-primary);
 }
@@ -1569,6 +1591,10 @@ footer p {
   
   .contact-hero {
     padding: 3rem 0;
+  }
+  
+  .contact-image {
+    max-height: 150px;
   }
   
   .contact-form-wrapper {
