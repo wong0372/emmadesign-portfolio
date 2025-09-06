@@ -56,6 +56,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,6 +72,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 .whole-container {
@@ -188,6 +194,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .hero-section::before {
@@ -370,6 +377,8 @@ position: relative;
   /* background: var(--bg-primary); */
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
+  will-change: auto;
 }
 
 .tv-container {
@@ -398,19 +407,19 @@ position: relative;
   border: 1px solid #6c757d;
   border-radius: 20px;
   box-shadow: 
-    0 20px 40px rgba(108, 117, 125, 0.3),
-    0 8px 16px rgba(108, 117, 125, 0.2),
+    0 10px 20px rgba(108, 117, 125, 0.2),
+    0 4px 8px rgba(108, 117, 125, 0.1),
     inset 0 2px 4px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  /* transform: perspective(1000px) rotateX(5deg) rotateY(-5deg); */
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: auto;
 }
 
 .tv-frame:hover {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.02);
+  transform: scale(1.02);
   box-shadow: 
-    0 25px 50px rgba(108, 117, 125, 0.4),
-    0 12px 24px rgba(108, 117, 125, 0.3),
+    0 15px 30px rgba(108, 117, 125, 0.3),
+    0 6px 12px rgba(108, 117, 125, 0.2),
     inset 0 2px 4px rgba(255, 255, 255, 0.15);
 }
 
@@ -427,11 +436,11 @@ position: relative;
 }
 
 .tv-screen img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: all 0.5s ease;
-  /* filter: brightness(1.1) contrast(1.1); */
+  transition: opacity 0.3s ease;
+  will-change: auto;
 }
 
 .tv-knobs {
@@ -735,9 +744,86 @@ position: relative;
 }
 
 /* Responsive adjustments */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+  }
+  
+  body {
+    scroll-behavior: smooth;
+  }
+  
   .hero-side-element {
-    display: none;
+    display: block;
+  }
+
+  .welcome-image {
+    width: 100px;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .hero-welcome {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-image-home {
+    width: 280px;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .hero-contact {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Enhanced smooth scrolling for mobile/tablet */
+  .hero-section,
+  .tv-showcase,
+  .skills-section,
+  .featured-work {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    scroll-behavior: smooth;
+  }
+  
+  /* TV Frame optimizations for mobile/tablet */
+  .tv-frame {
+    box-shadow: 
+      0 5px 10px rgba(108, 117, 125, 0.15),
+      0 2px 4px rgba(108, 117, 125, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    transform: none !important;
+  }
+  
+  .tv-frame:hover {
+    transform: scale(1.01) !important;
+    box-shadow: 
+      0 8px 16px rgba(108, 117, 125, 0.2),
+      0 3px 6px rgba(108, 117, 125, 0.15),
+      inset 0 1px 2px rgba(255, 255, 255, 0.15);
+  }
+  
+  .tv-screen img {
+    transition: none;
+  }
+  
+  /* Reduce AOS animation intensity on mobile for smoother scrolling */
+  [data-aos] {
+    transition-duration: 0.6s !important;
+  }
+  
+  /* Disable complex animations on mobile */
+  .tv-showcase [data-aos] {
+    transition-duration: 0.3s !important;
   }
 }
 
@@ -760,6 +846,7 @@ position: relative;
 /* Skills Section */
 .skills-section {
   background-color: var(--bg-primary);
+  transition: all 0.3s ease;
 }
 
 .skill-card {
@@ -3331,7 +3418,46 @@ footer p {
   }
   
   .welcome-image {
-    width: 150px;
+    width: 100px;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  .hero-welcome {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-image-home {
+    width: 200px;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  /* Additional mobile smooth scrolling optimizations */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+  }
+  
+  /* Optimize scrolling performance on mobile */
+  .hero-section,
+  .tv-showcase,
+  .skills-section,
+  .featured-work {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+  
+  .hero-contact {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .timeline-animal {
