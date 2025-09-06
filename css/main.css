@@ -1400,9 +1400,30 @@ footer p {
   margin-top: 1.5rem;
 }
 
+/* contact-illustration */
+
+/* .contact-illustration {
+  padding: 2rem 0;
+} */ 
+
 .contact-illustration {
   padding: 2rem 0;
+  display: inline-block; /* ensures transform works properly */
+  transition: transform 0.3s ease;
 }
+
+.contact-illustration:hover {
+  animation: pendulum-swing 3s ease-in-out infinite;
+}
+
+@keyframes pendulum-swing {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(5deg) scale(1.05); }
+  /* 50%  { transform: rotate(0deg) scale(1); } */
+  75%  { transform: rotate(-5deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+/* contact-illustration */
 
 .contact-image {
   max-width: 50%;
