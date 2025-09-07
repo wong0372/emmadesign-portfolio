@@ -759,7 +759,7 @@ position: relative;
   }
 
   .welcome-image {
-    width: 100px;
+    width: 120px;
     margin: 1rem auto;
     display: block;
   }
@@ -2980,7 +2980,7 @@ footer p {
 
 /* Welcome Image Styles */
 .welcome-image {
-  width: 125px;
+  width: 180px;
   height: auto;
   border-radius: var(--radius-lg);
   transition: var(--transition-normal);
@@ -3423,7 +3423,7 @@ footer p {
   }
   
   .welcome-image {
-    width: 100px;
+    width: 130px;
     margin: 1rem auto;
     display: block;
   }
