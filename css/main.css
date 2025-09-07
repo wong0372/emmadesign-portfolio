@@ -377,7 +377,6 @@ position: relative;
   /* background: var(--bg-primary); */
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
   will-change: auto;
 }
 
@@ -582,6 +581,34 @@ position: relative;
   0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
   40% { transform: translateY(-18px) translateX(-7px) rotate(144deg); }
   80% { transform: translateY(-12px) translateX(11px) rotate(288deg); }
+}
+/* new added 7-12 */
+@keyframes floatCircle7 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  35% { transform: translateY(-22px) translateX(8px) rotate(126deg); }
+  70% { transform: translateY(-8px) translateX(-14px) rotate(252deg); }
+}
+
+@keyframes floatCircle8 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25% { transform: translateY(-16px) translateX(-6px) rotate(90deg); }
+  50% { transform: translateY(-28px) translateX(9px) rotate(180deg); }
+  75% { transform: translateY(-12px) translateX(-11px) rotate(270deg); }
+}
+
+@keyframes floatCircle9 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  20% { transform: translateY(-14px) translateX(7px) rotate(72deg); }
+  40% { transform: translateY(-26px) translateX(-4px) rotate(144deg); }
+  60% { transform: translateY(-6px) translateX(13px) rotate(216deg); }
+  80% { transform: translateY(-20px) translateX(-9px) rotate(288deg); }
+}
+
+@keyframes floatCircle10 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  30% { transform: translateY(-24px) translateX(-12px) rotate(108deg); }
+  60% { transform: translateY(-4px) translateX(18px) rotate(216deg); }
+  90% { transform: translateY(-18px) translateX(-10px) rotate(324deg); }
 }
 
 /* Cat Animation */
@@ -791,7 +818,6 @@ position: relative;
   .tv-showcase,
   .skills-section,
   .featured-work {
-    transition: transform 0.3s ease, opacity 0.3s ease;
     scroll-behavior: smooth;
   }
   
